@@ -1,0 +1,460 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	img
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+h2
+	font-size: 18px
+	font-family: "LatoBold"
+	color: $text	
+
+
+
+
+.main-head
+	.menu-burger
+		display: none
+		.ham
+			cursor: pointer
+			-webkit-tap-highlight-color: transparent
+			transition: transform 400ms
+			-moz-user-select: none
+			-webkit-user-select: none
+			-ms-user-select: none
+			user-select: none
+			.line 
+				fill: none
+				transition: stroke-dasharray 400ms, stroke-dashoffset 400ms
+				stroke-width: 5.5
+				stroke-linecap: round
+			.top, .bottom
+				stroke: $accent
+			.middle
+				stroke: #000
+		.hamRotate.active 
+			transform: rotate(45deg)
+		.hamRotate180.active 
+			transform: rotate(180deg)
+		.hamB
+			.top 
+ 				 stroke-dasharray: 40 82
+		.hamB
+			.middle 
+				stroke-dasharray: 40 111
+		.hamB
+			.bottom 
+				stroke-dasharray: 40 161
+		.hamB.active
+			.top 
+				stroke-dasharray: 17 82
+				stroke-dashoffset: -62px
+		.hamB.active
+			.middle 
+				stroke-dashoffset: 23px
+		.hamB.active
+			.bottom 
+				stroke-dashoffset: -83px
+
+.main-head
+	font-family: "LatoBold"
+	height: auto
+	width: 100%
+	padding-bottom: 650px
+	background-image: url('../img/top_bg.png')
+	background-size: cover
+	background-position: top center
+	.header-mnu
+		display: flex
+		height: auto
+		.menu-wrap
+			display: flex
+			width: 100%
+			justify-content: center
+			align-items: center
+			.menu
+				padding: 0
+				display: flex
+				padding-top: 65px
+				justify-content: start
+				display: flex
+				li
+					margin: 0 5vw
+					text-transform: uppercase
+					display: inline-block
+					border: 1px solid transparent
+					border-radius: 45px
+					padding: 5px 12px
+					transition: 0.25s all ease-in
+					a
+						color: lighten($text, 5%)
+						transition: 0.25s all ease-in-out
+							
+
+.main-head
+	.menu-wrap
+		.menu
+			li:hover
+				color: #ffffff
+				box-shadow: 6px -6px 5px 1px $accent
+				a
+					color: #000
+					text-decoration: none
+
+.main-head
+	.menu-wrap
+		.menu
+			li:nth-child(3)
+				margin-left: 18vw
+
+
+.main-head
+	.header-mnu
+		position: relative
+		.logo
+			position: absolute
+			left: 50%
+			top: 30%
+			margin-left: -50px
+			min-width: 100px
+			img
+				width: 100%	
+
+.sect-gray
+	background-color: #f7f7f7
+
+.sect-info
+	text-align: center
+	.info-line
+		padding: 7vw 1vw
+		h2
+			text-transform: uppercase
+			letter-spacing: .3em
+			margin-bottom: 20px
+		.icon
+			margin-bottom: 20px
+			display: inline-block
+			width: 53px
+			height: 45px
+			background: url('../img/icons.png') no-repeat
+			background-position: -1px 0 
+
+
+.sect-advantages
+	font-size: 1.2vw
+	.bg-wrap
+		position: relative
+		height: 100%
+		display: block
+		max-width: 100%
+		height: auto
+		img
+			width: 100%
+		&::before
+			position: absolute
+			content: ''
+			width: 100%
+			height: 100%
+			top: 0
+			left: 0
+			bottom: 0
+			right: 0
+			margin: auto
+			background-position: center center
+			background-repeat: no-repeat
+
+.sect-advantages
+	.line-top
+		.bg-wrap
+			&::before
+				background-image: url('../img/top-logo.png')
+	.line-mid
+		.bg-wrap
+			&::before
+				background-image: url('../img/mid-logo.png')
+	.line-bot
+		.bg-wrap
+			&::before
+				background-image: url('../img/bot-logo.png')
+
+
+
+.sect-advantages
+	.line-adv
+		display: flex
+		width: 100%
+		height: auto
+		.img-wrap
+			width: 100%
+			flex: 1 1 66%
+		.info-wrap
+			display: flex
+			flex: 1 2 33%
+			flex-direction: column
+			justify-content: space-between
+			align-items: center
+			.info-text-wrap
+				display: flex
+				flex-direction: column
+				justify-content: center
+				align-items: center
+				padding: 0 40px
+				posititon: relative
+				height: 100%
+				&::before
+					position: absolute
+					display: block		
+			.info-img
+				width: 100%
+				position: relative
+				&::before
+					position: absolute
+					display: block
+					width: 0
+					height: 0
+					content: ''
+					top: 0
+					left: 50%
+					border-style: solid
+					border-color: #fff transparent transparent transparent
+					border-width: 10px
+
+.sect-advantages
+	.line-bot
+		.info-wrap
+			flex: 1 0 33%	
+
+
+.sect-advantages
+	.line-adv
+		.info-wrap
+			position: relative
+			p::before
+				position: absolute
+				content: ''
+				display: block
+				width: 2rem
+				bottom: 0
+				left: 50%
+				border-bottom: 1px solid #000000
+
+
+
+
+.sect-advantages
+	.line-adv
+		.info-icon
+			width: 45px
+			height: 45px
+			display: inline-block
+			background: url('../img/icons.png') no-repeat	
+	.line-top
+		.info-icon
+			background-position: -61px 0			
+	.line-mid
+		.info-icon
+			background-position: -110px 0
+	.line-bot
+		.info-icon
+			width: 43px
+			background-position: -152px 0
+
+.sect-twitter
+	text-align: center
+	padding: 7vw 0 2vw 0
+	.item
+		h2
+			margin-bottom: 15px
+		p
+			font-style: italic
+			margin-bottom: 5vw
+		.twitter-icon
+			width: 45px
+			height: 45px
+			display: inline-block
+			background: url('../img/icons.png') no-repeat
+			background-position: -188px 0	
+
+.sect-shop
+	.gallery-wrap
+		display: flex
+		.column
+			display: flex
+			flex-direction: column
+			.items-wrap
+				display: flex
+			.item
+				display: flex
+				position: relative	
+				a
+					display: block
+					max-width: 100%
+					height: auto
+					&::before
+						display: block
+						content: ''
+						position: absolute
+						top: 0
+						left: 0
+						width: 100%
+						height: 100%
+						background-color: rgba(100, 194, 158, 0.8)
+						background-image: url('../img/shop-now.png')
+						background-repeat: no-repeat
+						background-position: center center
+						opacity: 0
+						transition: all .25s ease
+					&:hover::before
+						opacity: 1
+					img
+						width: 100%
+
+.sect-shop
+	.gallery-wrap
+		.column.mid
+			flex-direction: row
+			flex: 1 1 537px
+
+
+
+
+
+@keyframes button
+	0%
+		box-shadow: 0px 0px 15px 2px rgba(255, 255, 255, .1)
+	35%
+		box-shadow: none
+	42%		
+		box-shadow: 0px 0px 15px 4px rgba(255, 255, 255, .1)
+	44%
+		box-shadow: none
+	56%
+		box-shadow: 0px 0px 15px 4px rgba(255, 255, 255, .1)
+	58%
+		box-shadow: none
+	100%
+		box-shadow: 0px 0px 15px 4px rgba(255, 255, 255, .1)
+
+
+
+
+
+.button-wrap
+	background-color: #282f35
+	text-align: center
+	padding: 75px 0
+	.button
+		font-size: 14px
+		padding: 6px 40px
+		font-family: 'LatoBold'
+		background-color: transparent
+		letter-spacing: .25em
+		border: 1px solid rgba(255, 255, 255, .5)
+		text-transform: uppercase
+		color: #fff
+		animation-name: button
+		animation-duration: 4s
+		animation-iteration-count: 5
+		&:hover
+			box-shadow: 0px 0px 15px 2px rgba(255, 255, 255, .1)
+			transition: all .5 ease
+
+.sect-form
+	.wrap-form
+		font-family: "LatoRegular"
+		padding: 95px 0
+		width: 100%
+		margin: 0 auto
+		text-align: center
+		form
+			text-align: center
+			padding: 0
+		.logo
+			margin-bottom: 2rem
+		p
+			margin-bottom: 1rem
+		input
+			height: auto
+			box-sizing: border-box
+			vertical-align: middle
+		input[type="text"]
+			color: #000
+			padding: 16px 50px
+			border: 1px solid #d3d7d9
+			&::placeholder
+				color: #d3d7d9
+		input[type="submit"]
+			text-transform: uppercase
+			font-size: 22px
+			background-color: #64c29e
+			color: #fff
+			border: 1px solid #64c29e
+			padding: 12px 50px
+
+.main-foot
+	display: flex
+	justify-content: start
+	.footer-wrap
+		display: flex
+		justify-content: center
+		align-items: center  
+		.adress
+			padding: 3vw 11.5vw
+		.social
+			display: flex
+			justify-content: center
+			padding: 2rem 4.5rem
+			a
+				display: block
+				width: 45px
+				height: 45px
+				&:nth-child(1)
+					background-image: url('../img/icons.png')
+					background-position: -228px 0
+				&:nth-child(2)
+					background-image: url('../img/icons.png')
+					background-position: -270px 0
+					margin-left: 15px
+				&:nth-child(3)
+					width: 42px
+					background-image: url('../img/icons.png')
+					background-position: -310px 0
+					margin-left: 15px
+				&:hover
+					transform: scale(1.3)
+					transition: .3s all ease 
+
+
+
+@import "media" // Always at the end
